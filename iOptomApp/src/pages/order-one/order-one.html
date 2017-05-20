@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>iOptom</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding text-center>
+  <div class="box">
+    <div class="top">
+      <h2 text-center>{{right_lens.name}}</h2>
+      <hr />
+    </div>
+
+    <div class="content">
+      <div class="row">
+        <img [src]="right_lens.image">
+
+        <ion-row row-without-margins>
+          <ion-col>
+            <button ion-button block large sphere-button color="number">
+              RE: {{right_lens.sphere.toFixed(2)}}
+            </button>
+          </ion-col>
+
+          <ion-col numberButtons text-right>
+            <button ion-button large color="number" (click)="down(right_lens)">-</button>
+            <button ion-button large color="number" middle>{{right_lens.quantity}}</button>
+            <button ion-button large color="number" (click)="up(right_lens)">+</button>
+          </ion-col>
+        </ion-row>
+
+        <ion-row row-without-margins>
+          <ion-col>
+            <button ion-button block large sphere-button color="number">
+              LE: {{left_lens.sphere.toFixed(2)}}
+            </button>
+          </ion-col>
+
+          <ion-col numberButtons text-right>
+            <button ion-button large color="number" (click)="down(left_lens)">-</button>
+            <button ion-button large color="number" middle>{{left_lens.quantity}}</button>
+            <button ion-button large color="number" (click)="up(left_lens)">+</button>
+          </ion-col>
+        </ion-row>
+
+        <button ion-button color="secondary" full large (click)="next()">
+          Continue
+        </button>
+      </div>
+    </div>
+
+    <div class="footer">
+      <hr />
+    </div>
+  </div>
+</ion-content>

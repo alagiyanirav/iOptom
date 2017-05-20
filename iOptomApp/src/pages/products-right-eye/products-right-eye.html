@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>iOptom</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding text-center>
+  <div class="box">
+    <div class="top">
+      <h2 text-center>Please select Lens for Right eye</h2>
+      <hr />
+    </div>
+
+    <div class="content">
+      <div class="row">
+
+        <div *ngIf="is_loading">
+          <ion-spinner color="number"></ion-spinner>
+
+          <div>Loading... Please wait...</div>
+        </div>
+
+        <div *ngIf="!is_loading && !items.length">
+          <p color="danger" ion-text text-center>No results found</p>
+        </div>
+
+        <div *ngIf="!is_loading && items.length">
+
+          <button ion-button clear sort-button (click)="sort()">
+            Sort Lenses
+
+            <img src="assets/sort.svg" />
+          </button>
+
+          <ion-list>
+            <button ion-item *ngFor="let item of items" (click)="selected(item)">
+              <ion-thumbnail item-left>
+                <img [src]="item.image">
+              </ion-thumbnail>
+
+              <h2>{{item.name}}</h2>
+
+              <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+
+              <button ion-fab clear item-right color="secondary">
+                <ion-icon name="eye"></ion-icon>
+              </button>
+
+            </button>
+          </ion-list>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <hr />
+    </div>
+  </div>
+</ion-content>

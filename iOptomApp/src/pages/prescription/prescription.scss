@@ -1,0 +1,64 @@
+page-prescription {
+  ion-grid {
+    padding: 0;
+
+    ion-row {
+      color: #00b0b0;
+
+      &:first-child {
+        font-size: 2rem;
+        text-transform: uppercase;
+
+        @media (min-width: 321px) {
+          font-size: 2.5rem;
+        }
+
+        @media (min-width: 375px) {
+          font-size: 2.8rem;
+        }
+
+        @media (min-width: 410px) {
+          font-size: 3rem;
+        }
+      }
+
+      ion-col {
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+
+      &[buttons] {
+        margin-bottom: 1.2rem;
+
+        button {
+          margin: 0;
+          box-shadow: none;
+          padding: 0 0.5em;
+
+          @media (min-width: 321px) {
+            padding: 0 0.6em;
+            height: 3.6rem;
+            font-size: 1.4rem;
+          }
+
+          @media (min-width: 375px) {
+            padding: 0 0.5em;
+            height: 2.8em;
+            font-size: 1.7rem;
+          }
+
+          @media (min-width: 410px) {
+            padding: 0 0.4em;
+            height: 2.8em;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

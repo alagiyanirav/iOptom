@@ -1,0 +1,47 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>{{lens.name}}</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <br />
+
+  <ion-card>
+
+    <div text-center>
+      <img [src]="lens.image">
+    </div>
+
+    <ion-card-content>
+      For maximum success, the initial recommended lenses are:
+    </ion-card-content>
+
+    <ion-row text-center>
+
+      <ion-col>
+        <p>
+          RE: {{lens.sphere.toFixed(2)}}
+        </p>
+        <p>
+          LE: {{lens.sphere.toFixed(2)}}
+        </p>
+      </ion-col>
+
+      <ion-col>
+        <button ion-button color="light" (click)="selectLens()">
+          Select lens >
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

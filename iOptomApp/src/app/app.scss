@@ -1,0 +1,209 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+// font-family: 'Didact Gothic', sans-serif;
+
+ion-app.md {
+  font-family: "Poppins", "Roboto", "Helvetica Neue", sans-serif;
+  line-height: 2.2rem;
+
+  button {
+    font-weight: 400;
+
+    .button-inner {
+      padding-top: 4px;
+    }
+  }
+}
+
+ion-app.ios {
+  font-family: "Poppins", -apple-system, "Helvetica Neue", "Roboto", sans-serif;
+  line-height: 2.2rem;
+}
+
+.box {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+
+  .top {
+    flex: 0 1 auto;
+  }
+
+  .content {
+    flex: 1 1 auto;
+    flex-flow: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    .row {
+      width: 100%;
+    }
+  }
+
+  .footer {
+    flex: 0 1 auto;
+  }
+}
+
+.toolbar-title {
+  font-weight: 400;
+}
+
+h2 {
+  font-weight: 300;
+  margin-top: 1.8rem;
+  margin-bottom: 1.8rem;
+  font-size: 2rem;
+}
+
+[padding2] {
+  .scroll-content {
+    padding: 16px 50px 16px 50px;
+  }
+}
+
+[padding3] {
+  .scroll-content {
+    padding: 16px 30px 16px 30px
+  }
+}
+
+[logo] {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  img {
+    width: 70%;
+  }
+}
+
+hr {
+  background-color: #00b0b0 !important;
+  height: 2px !important;
+  width: 130px;
+
+  margin-top: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+
+.picker-toolbar {
+  .picker-toolbar-button:first-child {
+    text-align: left;
+  }
+}
+
+[row-without-margins] {
+  ion-col:first-child {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  ion-col:last-child {
+    padding-right: 0;
+    margin-right: 0;
+  }
+}
+
+/*** Picker button ***/
+[picker-button] {
+  .button-inner {
+    justify-content: flex-start;
+
+    ion-icon {
+      right: 6px;
+      position: absolute;
+      background-color: #2b3138;
+      padding: 10px 5px;
+      top: 6px;
+
+      @media (min-width: 321px) {
+        padding: 4px;
+      }
+
+      @media (min-width: 375px) {
+        padding: 7px;
+      }
+
+      @media (min-width: 410px) {
+        padding: 10px;
+      }
+    }
+  }
+}
+
+// sort button from product screens
+[sort-button] {
+  margin-bottom: 2rem;
+
+  .button-inner {
+    font-size: 2.2rem;
+    text-transform: none;
+    font-weight: 400;
+  }
+
+  img {
+    transform: scale(1, -1) rotate(90deg);
+    width: 20px;
+    margin-bottom: 2px;
+    margin-left: 10px;
+  }
+}
+
+[numberButtons] {
+  button {
+    box-shadow: none;
+
+    &:first-child {
+      border-radius: 4px 0 0 4px;
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    &:last-child {
+      border-radius: 0 4px 4px 0;
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    .button-inner {
+      font-size: 2.2rem;
+    }
+  }
+
+  button[middle] {
+    border-radius: 0;
+    margin-left: -5px;
+    margin-right: -5px;
+    border-right: 0;
+    border-left: 0;
+    padding: 0;
+    max-width: 42px;
+
+    .button-inner {
+      margin-top: 0;
+      background-color: #FFF;
+      color: #000;
+      height: 4.2rem;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
